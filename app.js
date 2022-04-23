@@ -11,6 +11,7 @@ const number2=prompt("please enter your second number");
 alert (number1 +'&'+number2);
 alert (number2 +'&'+number1);
 
+alert( isGreater ); 
 
 let answer= prompt("enter a world in the field");
 alert(answer);
