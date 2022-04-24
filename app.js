@@ -1,16 +1,55 @@
 "use strict"
-function rand(x,y)
+////////////sumtriple
+function SumTripleEqualNumbers(num1,num2){
+if(num1==num2)
 {
-
-    return y+Math.floor(Math.random()*(x-y));
-} 
-console.log(rand(1,10));
-/////////
-function bin2dec(str) { 
-   let binary="1010101";
-   return parseInt(binary, 2);
+    return (num1+num2)*3;
 }
-console.log(bin2dec("10101010"));
+else
+{
+return (num1+num2);
+}}
+console.log(SumTripleEqualNumber(35,35));
+/////////////difference between a specified number and 19
+function ComputeDifference(number){
+    if (number <= 19) {
+     return (19-number);
+          }
+      else
+        {
+         return (number - 19) * 3;
+        }
+}
+console.log(ComputeDifference(25));
+console.log(ComputeDifference(0));
+/////////////////star with lo
+
+function StartWithLo(userstring){
+if (userstring.substring(0, 2) === 'Lo') 
+{
+  return userstring;
+}
+else{
+return "Lo"+userstring;
+}
+}
+
+console.log(StartWithLo("agancy"));
+
+
+/////*****************************////////////
+// function rand(x,y)
+// {
+
+//     return y+Math.floor(Math.random()*(x-y));
+// } 
+// console.log(rand(1,10));
+// /////////
+// function bin2dec(str) { 
+//    let binary="1010101";
+//    return parseInt(binary, 2);
+// }
+// console.log(bin2dec("10101010"));
 
 // alert("welcome to my page \n please answer questions in the field");
 // const firstname=prompt("what is your firstname?");
