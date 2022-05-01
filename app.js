@@ -163,4 +163,35 @@ else return false;
 }
 console.log(logicalGateXnor(false,false));
 
+/******fac/iterative*********/ 
+function factorial(x) {
+  let num = 1;
+  if (x > 1) {
+      for (let i = 1; i <= x; i++) {
+          num = num * i;
+      }
+      return num;
+  }
+  else {
+      return "your number is not acceptable for factorial";
+  }
+}
+let answer = +prompt("Enter a number for factorial");
+
+alert("factorial= " + factorial(answer));
+
+/*******fac/recursive*********/
+function factorial(x){
+  if (x <= 1){
+      return 1;
+  }
+  else{
+      return x * factorial(x-1);
+  }
+}
+let answer = +prompt("Enter a number for factorial");
+
+
+alert("factorial= " + factorial(answer));
+/****/
 
