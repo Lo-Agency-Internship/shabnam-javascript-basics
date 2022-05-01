@@ -1,40 +1,41 @@
 "use strict"
+
 ////////////sumtriple
-function SumTripleEqualNumbers(num1,num2){
-if(num1==num2)
-{
-    return (num1+num2)*3;
-}
-else
-{
-return (num1+num2);
-}}
-console.log(SumTripleEqualNumber(35,35));
-/////////////difference between a specified number and 19
-function ComputeDifference(number){
-    if (number <= 19) {
-     return (19-number);
-          }
-      else
-        {
-         return (number - 19) * 3;
-        }
-}
-console.log(ComputeDifference(25));
-console.log(ComputeDifference(0));
-/////////////////star with lo
+// function SumTripleEqualNumbers(num1,num2){
+// if(num1==num2)
+// {
+//     return (num1+num2)*3;
+// }
+// else
+// {
+// return (num1+num2);
+// }}
+// console.log(SumTripleEqualNumber(35,35));
+// /////////////difference between a specified number and 19
+// function ComputeDifference(number){
+//     if (number <= 19) {
+//      return (19-number);
+//           }
+//       else
+//         {
+//          return (number - 19) * 3;
+//         }
+// }
+// console.log(ComputeDifference(25));
+// console.log(ComputeDifference(0));
+// /////////////////star with lo
 
-function StartWithLo(userstring){
-if (userstring.substring(0, 2) === 'Lo') 
-{
-  return userstring;
-}
-else{
-return "Lo"+userstring;
-}
-}
+// function StartWithLo(userstring){
+// if (userstring.substring(0, 2) === 'Lo') 
+// {
+//   return userstring;
+// }
+// else{
+// return "Lo"+userstring;
+// }
+// }
 
-console.log(StartWithLo("agancy"));
+// console.log(StartWithLo("agancy"));
 
 
 /////*****************************////////////
@@ -71,3 +72,95 @@ console.log(StartWithLo("agancy"));
 
 // let answer= prompt("enter a world in the field");
 // alert(answer);
+/****************************-logicals-************************************/
+const p=true;
+function logicalGateBuffer(p) {
+ 
+  return p;   
+  
+
+  }
+console.log(logicalGateBuffer(p));
+
+const a=true;
+function logicalGateNot(a) {
+ 
+  return !a;   
+  
+
+  }
+console.log(logicalGateNot(a));
+
+
+function logicalGateAnd(x, y)
+{
+  if(x===true && y==true){
+    return true;}
+
+else return false;
+}
+console.log(logicalGateAnd(true,false));
+
+
+function logicalGateOr(x, y)
+{
+  if(x===true || y==true){
+    return true;}
+
+else return false;
+}
+console.log(logicalGateOr(false,false));
+
+
+
+function logicalGateNand(n, m)
+{
+  if(n===true && m==true){
+    return false;}
+
+else return true;
+}
+console.log(logicalGateNand(false,true));
+
+
+function logicalGateNor(n, m)
+{
+  if(n===false && m===false){
+    return true;}
+
+else return false;
+}
+console.log(logicalGateNor(false,false));
+
+
+function logicalGateXor(n, m)
+{
+  if(n===false && m===false){
+    return false;}
+    else if(n===true && m===true)
+    {
+      return false;
+    }
+      
+
+else return true;
+}
+console.log(logicalGateXor(false,false));
+
+
+
+function logicalGateXnor(n, m)
+{
+  if(n===false && m===false){
+    return true;}
+    else if(n===true && m===true)
+    {
+      return true;
+    }
+      
+
+else return false;
+}
+console.log(logicalGateXnor(false,false));
+
+
