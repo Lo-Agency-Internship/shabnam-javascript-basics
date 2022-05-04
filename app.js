@@ -195,3 +195,54 @@ let answer = +prompt("Enter a number for factorial");
 alert("factorial= " + factorial(answer));
 /****/
 
+/*find random number between 5-15*/
+const num = 10;
+const range = [5, 15];
+const randomRange = (a, b) => {
+   return Math.floor((Math.random() * (b - a)) + a);
+};
+const arr = (num, range) => {
+   let answer = [];
+   for(let i = 0; i < num;){
+      const random = randomRange(range[0], range[1]);
+      if(!answer.includes(random)){
+         answer.push(random);
+         i++;
+      };
+   };
+   return answer;
+};
+console.log(arr(num,range))
+/**function customMap**/
+function customMap(arr,f)
+  {
+    let map=[ ];
+    for(let element of array){
+      let result=map.push(f(element))
+    }
+    return map;
+  }
+/***function customFilter***/
+function customFliter(arr,f){
+  let filter=[ ];
+  for(let element of arr)
+    
+    if(f(element))
+    {
+      {
+      let result=filter.push(element)
+    }
+    }
+  return filter;
+}
+/***function customReduse***/
+function customReduse(arr,f)
+  {
+    let acc=0;
+      for(let element of arr)
+      {
+        acc=f(element,acc);
+      }
+    return acc;
+  }
+/*****/
