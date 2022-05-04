@@ -197,7 +197,7 @@ alert("factorial= " + factorial(answer));
 
 /*find random number between 5-15*/
 const num = 10;
-const range = [5, 15];
+const range = [15,50];
 const randomRange = (a, b) => {
    return Math.floor((Math.random() * (b - a)) + a);
 };
