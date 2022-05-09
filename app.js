@@ -247,4 +247,75 @@ function customReduse(arr,f)
       }
     return acc;
   }
-/*****/
+/**object assignment***/
+// parent
+class Media {
+  constructor(title){
+    this.objectratings = [];
+    this.objecttitle = title;
+    this.objectisCheckedOut = false;  
+  }
+  ///ischeckout
+    get isCheckedOut() {return this.objectisCheckedOut;}
+ ///togglecheckoutstatus
+  set isCheckedOut(input){this.objectisCheckedOut = input;}
+  toggleCheckOutStatus(){
+    this.objectisCheckedOut =true;}
+  get ratings() {return this.objectratings;}
+  get title() {return this.objecttitle;}
+  ///avg
+   getAverageRating() 
+  {
+    let sum = this.objectratings.reduce((acc, cur)=> acc + cur);
+    let Ratinglen = this.objectratings.length
+    return (sum/Ratinglen).toFixed(2);
+     }
+  addRating(userRate){
+    if (userRate > 0 && userRate <= 3){
+    this.objectratings.push(userRate);}
+    else{return `your rating is not valid`;}
+}}
+
+//////////children & get
+class Book extends Media {
+  constructor(pages,author,title){
+    super(title);
+    this.objectpages = pages;
+    this.objectauthor = author;
+  }
+
+  get author(){return this.objectauthor;}
+  get pages(){return this.objectpages;}
+}
+/////////////children & get
+class Movie extends Media{
+  constructor(runTime,director,title){
+    super(title);
+        this.objectrunTime = runTime;
+
+    this.objectdirector = director;
+  }
+  get director() {return this.objectdirector;}
+  get runTime() {return this.objectrunTime;}
+}
+/////////children & get
+class CD extends Media{
+  constructor(songs,artist,title){
+    super(title);
+    this.objectsongs = [songs];
+    this.objectartist = artist;
+    
+  }
+   get songs() {return this.objectsongs;}
+  get artist() {return this.objectartist;}
+
+}
+/////book obj for test
+let Thingsـprogrammersـneedـtoـknow=new Book(1000,'shbnm','learn js');
+Thingsـprogrammersـneedـtoـknow.toggleCheckOutStatus();
+console.log(Thingsـprogrammersـneedـtoـknow.isCheckedOut);
+Thingsـprogrammersـneedـtoـknow.addRating(1);
+Thingsـprogrammersـneedـtoـknow.addRating(2);
+
+console.log(Thingsـprogrammersـneedـtoـknow.getAverageRating());
+/////////////////////////////////////
